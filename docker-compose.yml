@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+  hasura:
+    image: hasura/graphql-engine:v1.0.0-beta.3
